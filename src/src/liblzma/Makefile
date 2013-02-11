@@ -105,16 +105,16 @@ am__append_4 = \
 	check/crc32_table_le.h \
 	check/crc32_table_be.h
 
-am__append_5 = check/crc32_x86.S
-#am__append_6 = check/crc32_fast.c
+#am__append_5 = check/crc32_x86.S
+am__append_6 = check/crc32_fast.c
 #am__append_7 = check/crc64_small.c
 am__append_8 = \
 	check/crc64_table.c \
 	check/crc64_table_le.h \
 	check/crc64_table_be.h
 
-am__append_9 = check/crc64_x86.S
-#am__append_10 = check/crc64_fast.c
+#am__append_9 = check/crc64_x86.S
+am__append_10 = check/crc64_fast.c
 am__append_11 = check/sha256.c
 am__append_12 = \
 	lz/lz_encoder.c \
@@ -333,12 +333,12 @@ am__objects_2 = liblzma_la-alone_decoder.lo \
 	liblzma_la-vli_decoder.lo
 #am__objects_3 = liblzma_la-crc32_small.lo
 am__objects_4 = liblzma_la-crc32_table.lo
-am__objects_5 = liblzma_la-crc32_x86.lo
-#am__objects_6 = liblzma_la-crc32_fast.lo
+#am__objects_5 = liblzma_la-crc32_x86.lo
+am__objects_6 = liblzma_la-crc32_fast.lo
 #am__objects_7 = liblzma_la-crc64_small.lo
 am__objects_8 = liblzma_la-crc64_table.lo
-am__objects_9 = liblzma_la-crc64_x86.lo
-#am__objects_10 = liblzma_la-crc64_fast.lo
+#am__objects_9 = liblzma_la-crc64_x86.lo
+am__objects_10 = liblzma_la-crc64_fast.lo
 am__objects_11 = liblzma_la-sha256.lo
 am__objects_12 = liblzma_la-lz_encoder.lo \
 	liblzma_la-lz_encoder_mf.lo
