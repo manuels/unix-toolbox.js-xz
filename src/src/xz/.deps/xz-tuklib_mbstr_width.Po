@@ -27,9 +27,7 @@ xz-tuklib_mbstr_width.o: ../../src/common/tuklib_mbstr_width.c \
   /home/manuel/Projekte/emscripten/system/include/libc/sys/types.h \
   /home/manuel/Projekte/emscripten/system/include/libc/machine/types.h \
   /home/manuel/Projekte/emscripten/system/include/libc/sys/sched.h \
-  /home/manuel/Projekte/emscripten/system/include/memory.h \
-  /home/manuel/Projekte/emscripten/system/include/libc/wchar.h \
-  /home/manuel/Projekte/emscripten/system/include/libc/stdarg.h
+  /home/manuel/Projekte/emscripten/system/include/memory.h
 
 ../../src/common/tuklib_mbstr.h:
 
@@ -92,7 +90,3 @@ xz-tuklib_mbstr_width.o: ../../src/common/tuklib_mbstr_width.c \
 /home/manuel/Projekte/emscripten/system/include/libc/sys/sched.h:
 
 /home/manuel/Projekte/emscripten/system/include/memory.h:
-
-/home/manuel/Projekte/emscripten/system/include/libc/wchar.h:
-
-/home/manuel/Projekte/emscripten/system/include/libc/stdarg.h:

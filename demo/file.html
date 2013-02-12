@@ -1,0 +1,47 @@
+<html>
+
+<script>
+  var worker = new Worker('../xz.js');
+  worker.postMessage(JSON.stringify({
+    id: 0,
+    cmd: 'addUrl',
+    real_url: 'demo/test.txt.xz',
+    pseudo_path: '/',
+    pseudo_name: 'test.txt.xz'
+  }));
+
+  worker.onmessage = function(ev) { console.log(ev);
+    var msg = JSON.parse(ev.data);
+    console.log(msg);
+
+    if(msg.id == 0) {
+      worker.postMessage(JSON.stringify({
+        id: -1,
+        cmd: 'addData',
+        contents: [],
+        pseudo_path: '/dev',
+        pseudo_name: 'null'
+      }));
+    }
+    if(msg.id == -1) {
+      worker.postMessage(JSON.stringify({
+        id: 1,
+        cmd: 'run',
+        args: ['-d', '/test.txt.xz']
+      }));
+    }
+    if(msg.id == 1) {
+      worker.postMessage(JSON.stringify({
+        id: 2,
+        cmd: 'getFile',
+        pseudo_path: '/',
+        pseudo_name: 'test.txt'
+      }));
+    }
+  }
+</script>
+
+<body>
+</body>
+
+</html>

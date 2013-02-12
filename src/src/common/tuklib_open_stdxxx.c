@@ -28,7 +28,7 @@ tuklib_open_stdxxx(int err_status)
 	(void)err_status;
 
 #else
-	for (int i = 0; i <= 2; ++i) {
+/*	for (int i = 0; i <= 2; ++i) {
 		// We use fcntl() to check if the file descriptor is open.
 		if (fcntl(i, F_GETFD) == -1 && errno == EBADF) {
 			// With stdin, we could use /dev/full so that
@@ -50,7 +50,7 @@ tuklib_open_stdxxx(int err_status)
 				exit(err_status);
 			}
 		}
-	}
+	}*/
 #endif
 
 	return;

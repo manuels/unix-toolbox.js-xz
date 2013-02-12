@@ -109,7 +109,7 @@
 #define HAVE_FCNTL_H 1
 
 /* Define to 1 if you have the `futimens' function. */
-#define HAVE_FUTIMENS 1
+//#define HAVE_FUTIMENS 1
 
 /* Define to 1 if you have the `futimes' function. */
 /* #undef HAVE_FUTIMES */
@@ -136,7 +136,7 @@
 #define HAVE_LIMITS_H 1
 
 /* Define to 1 if mbrtowc and mbstate_t are properly declared. */
-#define HAVE_MBRTOWC 1
+//#define HAVE_MBRTOWC 1
 
 /* Define to 1 if you have the <memory.h> header file. */
 #define HAVE_MEMORY_H 1
@@ -233,7 +233,7 @@
 #define HAVE_VISIBILITY 1
 
 /* Define to 1 if you have the `wcwidth' function. */
-#define HAVE_WCWIDTH 1
+//#define HAVE_WCWIDTH 1
 
 /* Define to 1 if the system has the type `_Bool'. */
 #define HAVE__BOOL 1
