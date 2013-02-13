@@ -16,15 +16,6 @@
 
     if(msg.id == 0) {
       worker.postMessage(JSON.stringify({
-        id: -1,
-        cmd: 'addData',
-        contents: [],
-        pseudo_path: '/dev',
-        pseudo_name: 'null'
-      }));
-    }
-    if(msg.id == -1) {
-      worker.postMessage(JSON.stringify({
         id: 1,
         cmd: 'run',
         args: ['-d', '/test.txt.xz']
