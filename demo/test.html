@@ -1,35 +1,31 @@
 <html>
 
+<script src="../toolbox-base/interface.js"></script>
+
 <script>
-  var worker = new Worker('../xz.js');
-  worker.postMessage(JSON.stringify({
-    id: 0,
-    cmd: 'addUrl',
-    real_url: 'demo/test.txt.xz',
-    pseudo_path: '/',
-    pseudo_name: 'test.txt.xz'
-  }));
+  var xz = new Interface('../xz-worker.js');
 
-  worker.onmessage = function(ev) { console.log(ev);
-    var msg = JSON.parse(ev.data);
-    console.log(msg);
+  xz.addUrl('demo/test.txt.xz', '/', 'test.txt.xz').then(function() {
+    xz.run('-d', '/test.txt.xz').then(function() {
+      xz.getFile('/', 'test.txt').then(function(contents) {
+        console.log(contents === 'Hello \nWorld!\n');
+      });
+    });
+  });
 
-    if(msg.id == 0) {
-      worker.postMessage(JSON.stringify({
-        id: 1,
-        cmd: 'run',
-        args: ['-d', '/test.txt.xz']
-      }));
-    }
-    if(msg.id == 1) {
-      worker.postMessage(JSON.stringify({
-        id: 2,
-        cmd: 'getFile',
-        pseudo_path: '/',
-        pseudo_name: 'test.txt'
-      }));
-    }
+
+  var xzdec = new Interface('../xzdec-worker.js');
+  var output = "";
+  xzdec.on_stdout = function(contents) {
+    output += contents;
   }
+  
+  xzdec.addUrl('demo/test.txt.xz', '/', 'test.txt.xz').then(function() {
+    xzdec.run('-d', '/test.txt.xz').then(function() {
+      console.log(output === 'Hello \nWorld!\n');
+    });
+  });
+
 </script>
 
 <body>
