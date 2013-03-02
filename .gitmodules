@@ -1,3 +1,4 @@
 [submodule "toolbox-base"]
 	path = toolbox-base
-	url = ../../base
+	url = git://github.com/manuels/unix-toolbox.js-base.git
+
